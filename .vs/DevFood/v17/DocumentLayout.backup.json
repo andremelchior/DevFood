@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs",
+              "RelativeDocumentMoniker": "DevFood\\Form1.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs*",
+              "RelativeToolTip": "DevFood\\Form1.cs*",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAMwF4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T00:56:10.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CadastroItens.cs",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs",
+              "RelativeDocumentMoniker": "DevFood\\CadastroItens.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs",
+              "RelativeToolTip": "DevFood\\CadastroItens.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T00:45:20.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs",
+              "RelativeDocumentMoniker": "DevFood\\Form1.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs [Design]*",
+              "RelativeToolTip": "DevFood\\Form1.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T23:31:30.971Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CadastroItens.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs",
+              "RelativeDocumentMoniker": "DevFood\\CadastroItens.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs [Design]",
+              "RelativeToolTip": "DevFood\\CadastroItens.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T23:13:34.429Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\DevFood.exe.config
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\DevFood.exe
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\DevFood.pdb
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.AssemblyReference.cache
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.Form1.resources
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.Properties.Resources.resources
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.GenerateResource.cache
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.CoreCompileInputs.cache
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.exe
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.pdb
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.CadastroItens.resources
