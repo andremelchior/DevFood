@@ -9,3 +9,17 @@ C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.CoreCompi
 C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.exe
 C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.pdb
 C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.CadastroItens.resources
+C:\Users\Andre\source\repos\DevFood\DevFood\bin\Debug\DevFood.exe.config
+C:\Users\Andre\source\repos\DevFood\DevFood\bin\Debug\DevFood.exe
+C:\Users\Andre\source\repos\DevFood\DevFood\bin\Debug\DevFood.pdb
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.AssemblyReference.cache
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.CadastroFuncionario.resources
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.CadastroItens.resources
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.Form1.resources
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.Home.resources
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.LoginFuncionario.resources
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.Properties.Resources.resources
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.GenerateResource.cache
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.CoreCompileInputs.cache
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.exe
+C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.pdb
