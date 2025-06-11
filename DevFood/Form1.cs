@@ -201,5 +201,10 @@ namespace DevFood
                 lblTaxa2.Enabled = false;
             }
         }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

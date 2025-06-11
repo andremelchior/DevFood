@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6AD194A-CC53-46C8-B476-81263941DF72}|DAO\\DAO.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\dao\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6AD194A-CC53-46C8-B476-81263941DF72}|DAO\\DAO.csproj|solutionrelative:dao\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|C:\\Users\\Tecnico\\source\\repos\\DevFood\\devfood\\loginfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\loginfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\loginfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\loginfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\loginfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\loginfuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|C:\\Users\\Tecnico\\source\\repos\\DevFood\\devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\cadastroitens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\cadastrofuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\cadastrofuncionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|c:\\users\\tecnico\\source\\repos\\devfood\\devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|C:\\Users\\Tecnico\\source\\repos\\DevFood\\devfood\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E3235AD3-039B-43F2-8789-A6CD794CBE71}|DevFood\\DevFood.csproj|solutionrelative:devfood\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,43 +55,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs",
-              "RelativeDocumentMoniker": "DevFood\\Form1.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs*",
-              "RelativeToolTip": "DevFood\\Form1.cs*",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAMwLUAAAApAAAAAAAAAA==",
+              "Title": "Dao.cs",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DAO\\Dao.cs",
+              "RelativeDocumentMoniker": "DAO\\Dao.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DAO\\Dao.cs",
+              "RelativeToolTip": "DAO\\Dao.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAmwC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T23:13:04.233Z",
+              "WhenOpened": "2025-06-11T01:07:03.113Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CadastroItens.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs",
+              "RelativeDocumentMoniker": "DevFood\\CadastroItens.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs [Design]",
+              "RelativeToolTip": "DevFood\\CadastroItens.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T00:53:22.826Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs",
-              "RelativeDocumentMoniker": "DevFood\\Form1.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs [Design]*",
-              "RelativeToolTip": "DevFood\\Form1.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T23:10:57.894Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Home.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Home.cs",
-              "RelativeDocumentMoniker": "DevFood\\Home.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Home.cs [Design]",
-              "RelativeToolTip": "DevFood\\Home.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T23:07:04.94Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "LoginFuncionario.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\LoginFuncionario.cs",
               "RelativeDocumentMoniker": "DevFood\\LoginFuncionario.cs",
@@ -91,29 +91,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "LoginFuncionario.cs",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\LoginFuncionario.cs",
+              "RelativeDocumentMoniker": "DevFood\\LoginFuncionario.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\LoginFuncionario.cs",
+              "RelativeToolTip": "DevFood\\LoginFuncionario.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAwB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T01:02:02.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Program.cs",
               "RelativeDocumentMoniker": "DevFood\\Program.cs",
               "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Program.cs",
               "RelativeToolTip": "DevFood\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBIAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T23:06:34.153Z",
+              "WhenOpened": "2025-06-11T01:01:30.127Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CadastroItens.cs",
-              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs",
-              "RelativeDocumentMoniker": "DevFood\\CadastroItens.cs",
-              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroItens.cs",
-              "RelativeToolTip": "DevFood\\CadastroItens.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAswCAAAAAJAAAAAAAAAA==",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs",
+              "RelativeDocumentMoniker": "DevFood\\Form1.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs [Design]",
+              "RelativeToolTip": "DevFood\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T00:45:20.231Z",
+              "WhenOpened": "2025-06-11T00:53:32.531Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CadastroFuncionario.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroFuncionario.cs",
+              "RelativeDocumentMoniker": "DevFood\\CadastroFuncionario.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\CadastroFuncionario.cs [Design]",
+              "RelativeToolTip": "DevFood\\CadastroFuncionario.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T00:51:38.273Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs",
+              "RelativeDocumentMoniker": "DevFood\\Form1.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Form1.cs",
+              "RelativeToolTip": "DevFood\\Form1.cs",
+              "ViewState": "AgIAAL0AAAAAAAAAAAApwM4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T00:54:13.463Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Home.cs",
+              "RelativeDocumentMoniker": "DevFood\\Home.cs",
+              "ToolTip": "C:\\Users\\Tecnico\\source\\repos\\DevFood\\DevFood\\Home.cs [Design]",
+              "RelativeToolTip": "DevFood\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T23:07:04.94Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },

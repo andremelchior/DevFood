@@ -27,3 +27,13 @@ C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.exe.config
 C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.CadastroFuncionario.resources
 C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.Home.resources
 C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.LoginFuncionario.resources
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\DAO.dll
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\PessoaFuncionario.dll
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\MySql.Data.dll
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\System.Memory.dll
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\DAO.pdb
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\PessoaFuncionario.pdb
+C:\Users\Tecnico\source\repos\DevFood\DevFood\bin\Debug\MySql.Data.xml
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.Up2Date

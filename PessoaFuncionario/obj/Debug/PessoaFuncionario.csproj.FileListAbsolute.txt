@@ -1,0 +1,6 @@
+C:\Users\Tecnico\source\repos\DevFood\PessoaFuncionario\bin\Debug\PessoaFuncionario.dll
+C:\Users\Tecnico\source\repos\DevFood\PessoaFuncionario\bin\Debug\PessoaFuncionario.pdb
+C:\Users\Tecnico\source\repos\DevFood\PessoaFuncionario\obj\Debug\PessoaFuncionario.csproj.AssemblyReference.cache
+C:\Users\Tecnico\source\repos\DevFood\PessoaFuncionario\obj\Debug\PessoaFuncionario.csproj.CoreCompileInputs.cache
+C:\Users\Tecnico\source\repos\DevFood\PessoaFuncionario\obj\Debug\PessoaFuncionario.dll
+C:\Users\Tecnico\source\repos\DevFood\PessoaFuncionario\obj\Debug\PessoaFuncionario.pdb

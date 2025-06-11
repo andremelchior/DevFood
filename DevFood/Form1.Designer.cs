@@ -34,6 +34,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTaxa2 = new System.Windows.Forms.Label();
+            this.txtTaxa2 = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -65,8 +67,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblTaxa2 = new System.Windows.Forms.Label();
-            this.txtTaxa2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -93,8 +93,9 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.lblTitle);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1197, 565);
-            this.splitContainer1.SplitterDistance = 208;
+            this.splitContainer1.SplitterDistance = 184;
             this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
@@ -104,10 +105,10 @@
             this.button4.BackColor = System.Drawing.Color.MediumPurple;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(-20, 235);
+            this.button4.Location = new System.Drawing.Point(27, 235);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(219, 35);
+            this.button4.Size = new System.Drawing.Size(129, 35);
             this.button4.TabIndex = 11;
             this.button4.Text = "Cadastro";
             this.button4.UseVisualStyleBackColor = false;
@@ -117,10 +118,10 @@
             this.button3.BackColor = System.Drawing.Color.MediumPurple;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(-20, 112);
+            this.button3.Location = new System.Drawing.Point(27, 112);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 35);
+            this.button3.Size = new System.Drawing.Size(129, 35);
             this.button3.TabIndex = 10;
             this.button3.Text = "Pedido";
             this.button3.UseVisualStyleBackColor = false;
@@ -130,10 +131,10 @@
             this.button2.BackColor = System.Drawing.Color.MediumPurple;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(-16, 174);
+            this.button2.Location = new System.Drawing.Point(28, 174);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 35);
+            this.button2.Size = new System.Drawing.Size(129, 35);
             this.button2.TabIndex = 9;
             this.button2.Text = "Pratos";
             this.button2.UseVisualStyleBackColor = false;
@@ -143,10 +144,10 @@
             this.button5.BackColor = System.Drawing.Color.MediumPurple;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(-16, 51);
+            this.button5.Location = new System.Drawing.Point(28, 51);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(219, 35);
+            this.button5.Size = new System.Drawing.Size(129, 35);
             this.button5.TabIndex = 8;
             this.button5.Text = "Home";
             this.button5.UseVisualStyleBackColor = false;
@@ -189,6 +190,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(914, 411);
             this.panel1.TabIndex = 3;
+            // 
+            // lblTaxa2
+            // 
+            this.lblTaxa2.AutoSize = true;
+            this.lblTaxa2.Enabled = false;
+            this.lblTaxa2.Location = new System.Drawing.Point(675, 184);
+            this.lblTaxa2.Name = "lblTaxa2";
+            this.lblTaxa2.Size = new System.Drawing.Size(120, 20);
+            this.lblTaxa2.TabIndex = 34;
+            this.lblTaxa2.Text = "% Taxa Couvert";
+            this.lblTaxa2.Visible = false;
+            this.lblTaxa2.Click += new System.EventHandler(this.label7_Click_1);
+            // 
+            // txtTaxa2
+            // 
+            this.txtTaxa2.Enabled = false;
+            this.txtTaxa2.Location = new System.Drawing.Point(814, 181);
+            this.txtTaxa2.Name = "txtTaxa2";
+            this.txtTaxa2.Size = new System.Drawing.Size(68, 26);
+            this.txtTaxa2.TabIndex = 33;
+            this.txtTaxa2.Visible = false;
+            this.txtTaxa2.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // comboBox5
             // 
@@ -464,28 +487,6 @@
             this.lblTitle.Size = new System.Drawing.Size(125, 37);
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Pedido";
-            // 
-            // lblTaxa2
-            // 
-            this.lblTaxa2.AutoSize = true;
-            this.lblTaxa2.Enabled = false;
-            this.lblTaxa2.Location = new System.Drawing.Point(675, 184);
-            this.lblTaxa2.Name = "lblTaxa2";
-            this.lblTaxa2.Size = new System.Drawing.Size(120, 20);
-            this.lblTaxa2.TabIndex = 34;
-            this.lblTaxa2.Text = "% Taxa Couvert";
-            this.lblTaxa2.Visible = false;
-            this.lblTaxa2.Click += new System.EventHandler(this.label7_Click_1);
-            // 
-            // txtTaxa2
-            // 
-            this.txtTaxa2.Enabled = false;
-            this.txtTaxa2.Location = new System.Drawing.Point(814, 181);
-            this.txtTaxa2.Name = "txtTaxa2";
-            this.txtTaxa2.Size = new System.Drawing.Size(68, 26);
-            this.txtTaxa2.TabIndex = 33;
-            this.txtTaxa2.Visible = false;
-            this.txtTaxa2.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // Form1
             // 

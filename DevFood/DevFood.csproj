@@ -115,5 +115,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{d6ad194a-cc53-46c8-b476-81263941df72}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PessoaFuncionario\PessoaFuncionario.csproj">
+      <Project>{51fa8156-3448-40c1-866a-ee24c20dfb35}</Project>
+      <Name>PessoaFuncionario</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
