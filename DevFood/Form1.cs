@@ -91,14 +91,19 @@ namespace DevFood
         {
             if (chkTaxa2.Checked)
             {
-                txtVlrTaxa.Enabled = true;
-                lblTaxa.Enabled = true;
+                txtTaxa2.Enabled = true;
+                lblTaxa2.Enabled = true;
             }
             else
             {
-                txtVlrTaxa.Enabled = false;
-                lblTaxa.Enabled = false;
+                txtTaxa2.Enabled = false;
+                lblTaxa2.Enabled = false;
             }
+
+            //if (chkTaxa2.Checked)
+            //{
+            //    
+            //}
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -119,6 +124,82 @@ namespace DevFood
         private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
         {
 
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkTaxa1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTaxa1.Checked)
+            {
+                txtVlrTaxa.Enabled = true;
+                txtVlrTaxa.Visible = true;
+
+                lblTaxa.Enabled = true;
+                lblTaxa.Visible = true;
+                lblTaxa2.Visible = true;
+
+            }
+            else
+            {
+                txtVlrTaxa.Enabled = false;
+                lblTaxa.Enabled = false;
+                txtVlrTaxa.Visible = false;
+
+
+            }
+
+        }
+
+        private void rdSemTaxas_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdComTaxas_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (rdComTaxas.Checked)
+            {
+                chkTaxa1.Checked = true;
+                chkTaxa1.Visible = true;
+                chkTaxa2.Visible = true;
+            }
+            else
+            {
+                chkTaxa1.Checked = false;
+                chkTaxa1.Visible = false;
+                chkTaxa2.Checked = false;
+                chkTaxa2.Visible = false;
+                lblTaxa.Visible = false;
+                lblTaxa2.Visible = false;
+            }
+        }
+
+        private void chkTaxa2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (chkTaxa2.Checked)
+            {
+                txtTaxa2.Enabled = true;
+                txtTaxa2.Visible = true;
+                lblTaxa2.Enabled = true;
+                lblTaxa2.Enabled = true;
+            }
+            else
+            {
+
+                txtTaxa2.Enabled = false;
+                txtTaxa2.Visible = false;
+                lblTaxa2.Enabled = false;
+                lblTaxa2.Enabled = false;
+            }
         }
     }
 }

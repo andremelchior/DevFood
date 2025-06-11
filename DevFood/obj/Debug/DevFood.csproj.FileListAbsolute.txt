@@ -23,3 +23,7 @@ C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.GenerateRes
 C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.csproj.CoreCompileInputs.cache
 C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.exe
 C:\Users\Andre\source\repos\DevFood\DevFood\obj\Debug\DevFood.pdb
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.exe.config
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.CadastroFuncionario.resources
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.Home.resources
+C:\Users\Tecnico\source\repos\DevFood\DevFood\obj\Debug\DevFood.LoginFuncionario.resources
