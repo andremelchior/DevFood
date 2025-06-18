@@ -1,10 +1,6 @@
 # DevFood
 
-Este projeto é um **programa desktop** para cadastro, acompanhamento e gerenciamento <br>
-de pedidos de um restaurante feito em **C#** no Visual Studio, utilizanddo componentes <br>
-do **Windows Forms** e **Class Libray** para criar bibliotecas de classes reutilizaveis, que são: <br>
-"Users" que contém as classes "Pessoa" e "Funcionario" que são as entidades que representam <br>
-o usuário do sistema e "DAO" que faz acesso ao banco de dados **MySQL** (Data Access Object).
+Este projeto é um **programa desktop** para cadastro, acompanhamento e gerenciamento de pedidos de um restaurante feito em **C#** no Visual Studio, utilizanddo componentes do **Windows Forms** e **Class Libray** para criar bibliotecas de classes reutilizaveis, que são: "Users" que contém as classes "Pessoa" e "Funcionario" que são as entidades que representam o usuário do sistema e "DAO" que faz acesso ao banco de dados **MySQL** (Data Access Object).
 
 ## 👥 Integrantes:
 - André Diogo Melchior da Silva
@@ -25,7 +21,7 @@ o usuário do sistema e "DAO" que faz acesso ao banco de dados **MySQL** (Data A
 ## ✨ Funcionalidades
 
 - Cadastro de Funcionario
-- Login e senha para funcionarios
+- Login e logout de funcionarios
 - Cadastro de Pedidos
 - Acompanhamento de Pedidos
 - Cadastro de novos pratos
@@ -35,6 +31,7 @@ o usuário do sistema e "DAO" que faz acesso ao banco de dados **MySQL** (Data A
 #### 📦 Pré-requisitos:
 - Tenha o [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet) instalado
 - **Visual Studio** com o componente de Desenvolvimento para desktop com .NET
+- Tenha o MySQL instalado
 
 #### 🔢 Passo a passo:
 
@@ -57,6 +54,7 @@ o usuário do sistema e "DAO" que faz acesso ao banco de dados **MySQL** (Data A
 #### 📦 Pré-requisitos:
 - [.NET SDK](https://dotnet.microsoft.com/en-us/download) instalado (versão 5.0 ou superior)
 - Sistema operacional Windows
+- Tenha o MySQL instalado
 
 #### 🔢 Passo a passo:
 
