@@ -43,28 +43,32 @@ namespace DevFood
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cmbItem1.Items.Clear();
-            cmbItem2.Items.Clear();
-            cmbItem3.Items.Clear();
-            cmbItem4.Items.Clear();
-            cmbItem5.Items.Clear();
-            cmbItem1.Text = "[Selecione]";
-            cmbItem2.Text = "[Selecione]";
-            cmbItem3.Text = "[Selecione]";
-            cmbItem4.Text = "[Selecione]";
-            cmbItem5.Text = "[Selecione]";
-
             var conn = new Dao();
-            string[] pratos = new string[3];
 
-            for (int i = 0; i < pratos.Length; i++)
+            if (conn.verificarPratos())
             {
-                pratos[i] = conn.pegarPrato(i + 1);
-                cmbItem1.Items.Add(pratos[i]);
-                cmbItem2.Items.Add(pratos[i]);
-                cmbItem3.Items.Add(pratos[i]);
-                cmbItem4.Items.Add(pratos[i]);
-                cmbItem5.Items.Add(pratos[i]);
+                cmbItem1.Items.Clear();
+                cmbItem2.Items.Clear();
+                cmbItem3.Items.Clear();
+                cmbItem4.Items.Clear();
+                cmbItem5.Items.Clear();
+                cmbItem1.Text = "[Selecione]";
+                cmbItem2.Text = "[Selecione]";
+                cmbItem3.Text = "[Selecione]";
+                cmbItem4.Text = "[Selecione]";
+                cmbItem5.Text = "[Selecione]";
+
+                string[] pratos = new string[3];
+
+                for (int i = 0; i < pratos.Length; i++)
+                {
+                    pratos[i] = conn.pegarPrato(i + 1);
+                    cmbItem1.Items.Add(pratos[i]);
+                    cmbItem2.Items.Add(pratos[i]);
+                    cmbItem3.Items.Add(pratos[i]);
+                    cmbItem4.Items.Add(pratos[i]);
+                    cmbItem5.Items.Add(pratos[i]);
+                }
             }
         }
 

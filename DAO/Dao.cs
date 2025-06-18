@@ -20,10 +20,11 @@ namespace DAO
         public Dao()
         {
             string server = "localhost";
+            string port = "3307";
             string database = "devfood";
             string uid = "root";
 
-            this.mConn = new MySqlConnection($"server={server};database={database};uid={uid};password=''");
+            this.mConn = new MySqlConnection($"server={server};port={port};database={database};uid={uid};password=''");
 
             try
             {
@@ -297,6 +298,32 @@ namespace DAO
             catch (Exception ex)
             {
                 Console.WriteLine("Erro! não foi possivel cadastrar o funcionario. \n\n" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                mConn.Close();
+            }
+        }
+
+        public bool verificarPratos()
+        {
+            try
+            {
+                if (mConn.State != ConnectionState.Open)
+                {
+                    mConn.Open();
+                }
+
+                this.sql = $"SELECT count(*) FROM Prato";
+                MySqlCommand cmd = new MySqlCommand(this.sql, this.mConn);
+
+                int linhas = cmd.ExecuteNonQuery();
+                return linhas > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro! não foi possível verificar o prato. \n\n" + ex.Message);
                 return false;
             }
             finally
