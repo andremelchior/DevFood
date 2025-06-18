@@ -31,7 +31,7 @@ namespace DevFood
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 pedido = new Form1();
+            frmPedido pedido = new frmPedido();
             pedido.Show();
             this.Hide();
         }
@@ -46,13 +46,47 @@ namespace DevFood
         private void button4_Click(object sender, EventArgs e)
         {
             CadastroFuncionario cadFunc = new CadastroFuncionario();
-            cadFunc.Show();
-            this.Hide();
+            MessageBox.Show($"Você já está na tela de {cadFunc.Text}");
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            var lg = new LoginFuncionario();
+            lg.Show();
+            this.Hide();
+        }
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var conn = new DAO.Dao();
+            if(conn.cadastrarFuncionario(txtNome.Text, txtEmail.Text, txtCargo.Text, txtCPF.Text, txtSenha.Text))
+            {
+                MessageBox.Show("Funcionário cadastrado com sucesso!");
+                txtNome.Clear();
+                txtCPF.Clear();
+                txtSenha.Clear();
+                txtCargo.Clear();
+                txtEmail.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao cadastrar funcionário.");
+            }
         }
     }
 }

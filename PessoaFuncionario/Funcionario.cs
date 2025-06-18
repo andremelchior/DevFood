@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PessoaFuncionario
 {
-    internal class Funcionario : Pessoa
+    public class Funcionario : Pessoa
     {
         public int Cargo { get; set; }
     }

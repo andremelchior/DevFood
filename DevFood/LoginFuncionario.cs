@@ -15,20 +15,33 @@ namespace DevFood
     public partial class LoginFuncionario : Form
     {
         public Dao connect;
-        public Pessoa p;
+        public static Funcionario f;
 
         public LoginFuncionario()
         {
             InitializeComponent();
             connect = new Dao();
-            p = new Pessoa();
-
+            f = new Funcionario();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //verifica com método para validacao
-            connect.login(p);
+            f.Cpf = txtCpf.Text;
+            f.Senha = txtSenha.Text;
+            if (connect.login(f))
+            {
+                MessageBox.Show("Login realizado com sucesso!");
+                Form home = new Home(); 
+                this.Hide();
+                home.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("CPF ou senha inválidos! tente novamente.");
+                txtCpf.Clear();
+                txtSenha.Clear();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -38,7 +51,6 @@ namespace DevFood
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            p.Cpf = long.Parse(txtCpf.Text);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -49,12 +61,21 @@ namespace DevFood
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             txtSenha.UseSystemPasswordChar = true;
-            p.Senha = txtSenha.Text;
         }
 
         private void LoginFuncionario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

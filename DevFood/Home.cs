@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PessoaFuncionario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAO;
 
 namespace DevFood
 {
@@ -39,14 +41,13 @@ namespace DevFood
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
-            this.Hide();
+            var hm = new Home();
+            MessageBox.Show($"Você já está na tela de {hm.Text}");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form1 pedido = new Form1();
+            frmPedido pedido = new frmPedido();
             pedido.Show();
             this.Hide();
         }
@@ -72,7 +73,28 @@ namespace DevFood
 
         private void label1_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void Home_Load(object sender, EventArgs e)
+        {
+            Funcionario F = new Funcionario();
+            var connect = new Dao();
+            lblHome.Text = $"Olá, seja bem-vindo(a) {connect.username(LoginFuncionario.f)}! DevFood é um sistema de gerenciamento de " +
+                $"pedidos, pratos e funcionarios de um restaurante. Você consegue acessar as guias através da barra lateral de navegação, " +
+                $"contendo no menu a página de Home, Pedido, Pratos e Cadastro de Funcionarios.";
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            var lg = new LoginFuncionario();
+            lg.Show();
+            this.Hide();
         }
     }
 }

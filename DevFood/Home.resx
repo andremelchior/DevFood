@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Olá, seja bem-vindo ao sistema. DevFood é um sistema de gerenciamento de pedidos, pratos e funcionarios de um restaurante. Você consegue acessar as guias através da barra lateral de navegação, contendo no menu a página de Home, Pedido, Pratos e Cadastro.</value>
-  </data>
 </root>
