@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Users;
 
 namespace DevFood
 {
@@ -73,8 +74,12 @@ namespace DevFood
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Funcionario funcionario = new Funcionario();
+
+            funcionario.cadastrar(txtId.Text, txtNome.Text, txtEmail.Text, txtCargo.Text, txtCPF.Text, txtSenha.Text);
+
             var conn = new DAO.Dao();
-            if(conn.cadastrarFuncionario(txtNome.Text, txtEmail.Text, txtCargo.Text, txtCPF.Text, txtSenha.Text))
+            if(conn.cadastrarFuncionario(funcionario))
             {
                 MessageBox.Show("Funcionário cadastrado com sucesso!");
                 txtNome.Clear();

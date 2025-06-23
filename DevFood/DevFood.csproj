@@ -120,9 +120,9 @@
       <Project>{d6ad194a-cc53-46c8-b476-81263941df72}</Project>
       <Name>DAO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PessoaFuncionario\PessoaFuncionario.csproj">
+    <ProjectReference Include="..\PessoaFuncionario\Users.csproj">
       <Project>{51fa8156-3448-40c1-866a-ee24c20dfb35}</Project>
-      <Name>PessoaFuncionario</Name>
+      <Name>Users</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

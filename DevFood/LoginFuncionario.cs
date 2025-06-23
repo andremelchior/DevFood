@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAO;
-using PessoaFuncionario;
+using Users;
 
 namespace DevFood
 {

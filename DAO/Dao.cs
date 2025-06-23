@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PessoaFuncionario;
+using Users;
 using MySql.Data.MySqlClient;
 using System.Data;
 
@@ -12,7 +12,7 @@ namespace DAO
 {
     public class Dao
     {
-        Pessoa user = new Funcionario();
+        Funcionario user = new Funcionario();
 
         public string sql;
         public MySqlConnection mConn;
@@ -20,7 +20,7 @@ namespace DAO
         public Dao()
         {
             string server = "localhost";
-            string port = "3307";
+            string port = "3306";
             string database = "devfood";
             string uid = "root";
 
@@ -276,7 +276,7 @@ namespace DAO
             }
         }
 
-        public bool cadastrarFuncionario(string nome, string email, string cargo, string cpf, string senha)
+        public bool cadastrarFuncionario(Funcionario F)
         {
             try
             {
@@ -284,14 +284,15 @@ namespace DAO
                 {
                     mConn.Open();
                 }
-                this.sql = "INSERT INTO Funcionario (nome, email, cargo, cpf, senha) " +
-                           "VALUES (@nome, @email, @cargo, @cpf, @senha)";
+                this.sql = "INSERT INTO Funcionario (cod_funcionario, nome, email, cargo, cpf, senha) " +
+                           "VALUES (@id, @nome, @email, @cargo, @cpf, @senha)";
                 MySqlCommand cmd = new MySqlCommand(this.sql, mConn);
-                cmd.Parameters.AddWithValue("@nome", nome);
-                cmd.Parameters.AddWithValue("@email", email);
-                cmd.Parameters.AddWithValue("@cargo", cargo);
-                cmd.Parameters.AddWithValue("@cpf", cpf);
-                cmd.Parameters.AddWithValue("@senha", senha);
+                cmd.Parameters.AddWithValue("@id", F.Id);
+                cmd.Parameters.AddWithValue("@nome", F.Nome);
+                cmd.Parameters.AddWithValue("@email", F.Email);
+                cmd.Parameters.AddWithValue("@cargo", F.Cargo);
+                cmd.Parameters.AddWithValue("@cpf", F.Cpf);
+                cmd.Parameters.AddWithValue("@senha", F.Senha);
                 int linhas = cmd.ExecuteNonQuery();
                 return linhas > 0;
             }

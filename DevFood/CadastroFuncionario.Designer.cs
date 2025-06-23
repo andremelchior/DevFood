@@ -37,6 +37,10 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.TextBox();
@@ -44,10 +48,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.Prato = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.lblCargo = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -174,6 +177,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtId);
+            this.panel1.Controls.Add(this.lblId);
             this.panel1.Controls.Add(this.txtCargo);
             this.panel1.Controls.Add(this.lblCargo);
             this.panel1.Controls.Add(this.txtEmail);
@@ -191,9 +197,47 @@
             this.panel1.Size = new System.Drawing.Size(609, 216);
             this.panel1.TabIndex = 2;
             // 
+            // txtCargo
+            // 
+            this.txtCargo.Location = new System.Drawing.Point(376, 34);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(150, 20);
+            this.txtCargo.TabIndex = 10;
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblCargo.Location = new System.Drawing.Point(300, 36);
+            this.lblCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(46, 17);
+            this.lblCargo.TabIndex = 9;
+            this.lblCargo.Text = "Cargo";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(119, 104);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(150, 20);
+            this.txtEmail.TabIndex = 8;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblEmail.Location = new System.Drawing.Point(43, 106);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(42, 17);
+            this.lblEmail.TabIndex = 7;
+            this.lblEmail.Text = "Email";
+            // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(376, 67);
+            this.txtSenha.Location = new System.Drawing.Point(376, 104);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(150, 20);
@@ -202,16 +246,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(300, 70);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(300, 107);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Senha";
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(376, 34);
+            this.txtCPF.Location = new System.Drawing.Point(376, 71);
             this.txtCPF.Margin = new System.Windows.Forms.Padding(2);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(150, 20);
@@ -220,10 +265,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(300, 36);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(300, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "CPF";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -241,7 +287,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(108, 34);
+            this.txtNome.Location = new System.Drawing.Point(119, 69);
             this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(150, 20);
@@ -250,48 +296,43 @@
             // Prato
             // 
             this.Prato.AutoSize = true;
-            this.Prato.Location = new System.Drawing.Point(32, 34);
+            this.Prato.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Prato.Location = new System.Drawing.Point(43, 69);
             this.Prato.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Prato.Name = "Prato";
-            this.Prato.Size = new System.Drawing.Size(35, 13);
+            this.Prato.Size = new System.Drawing.Size(45, 17);
             this.Prato.TabIndex = 0;
             this.Prato.Text = "Nome";
             // 
-            // txtEmail
+            // txtId
             // 
-            this.txtEmail.Location = new System.Drawing.Point(108, 69);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(150, 20);
-            this.txtEmail.TabIndex = 8;
+            this.txtId.Location = new System.Drawing.Point(119, 33);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(33, 20);
+            this.txtId.TabIndex = 12;
             // 
-            // lblEmail
+            // lblId
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(32, 71);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblEmail.TabIndex = 7;
-            this.lblEmail.Text = "Email";
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblId.Location = new System.Drawing.Point(43, 33);
+            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(21, 17);
+            this.lblId.TabIndex = 11;
+            this.lblId.Text = "ID";
             // 
-            // txtCargo
+            // label4
             // 
-            this.txtCargo.Location = new System.Drawing.Point(108, 104);
-            this.txtCargo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(150, 20);
-            this.txtCargo.TabIndex = 10;
-            // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(32, 106);
-            this.lblCargo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(35, 13);
-            this.lblCargo.TabIndex = 9;
-            this.lblCargo.Text = "Cargo";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
+            this.label4.Location = new System.Drawing.Point(167, 36);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "(Opcional)";
             // 
             // CadastroFuncionario
             // 
@@ -335,5 +376,8 @@
         private System.Windows.Forms.Label lblCargo;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label label4;
     }
 }
