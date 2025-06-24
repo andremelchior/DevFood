@@ -88,7 +88,7 @@
             this.btnFechar.BackColor = System.Drawing.Color.MediumPurple;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFechar.Location = new System.Drawing.Point(17, 219);
+            this.btnFechar.Location = new System.Drawing.Point(17, 402);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(86, 23);
             this.btnFechar.TabIndex = 18;
@@ -101,7 +101,7 @@
             this.btnSair.BackColor = System.Drawing.Color.MediumPurple;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSair.Location = new System.Drawing.Point(17, 184);
+            this.btnSair.Location = new System.Drawing.Point(17, 367);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 23);
             this.btnSair.TabIndex = 17;
@@ -320,7 +320,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "CadastroItens";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Pratos";

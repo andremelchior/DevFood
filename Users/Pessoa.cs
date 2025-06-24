@@ -33,7 +33,7 @@ namespace Users
         public string Cpf { get; set; }
         public string Senha { get; set; }
 
-        public abstract string exibirDados();
+        public abstract string exibirDados(Funcionario F);
 
         public void cadastrar(int? id, string nome, string email, string cpf, string senha)
         {

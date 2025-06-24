@@ -37,6 +37,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
@@ -50,9 +53,6 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.Prato = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -92,7 +92,7 @@
             this.btnFechar.BackColor = System.Drawing.Color.MediumPurple;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFechar.Location = new System.Drawing.Point(17, 219);
+            this.btnFechar.Location = new System.Drawing.Point(17, 402);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(86, 23);
             this.btnFechar.TabIndex = 12;
@@ -105,7 +105,7 @@
             this.btnSair.BackColor = System.Drawing.Color.MediumPurple;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSair.Location = new System.Drawing.Point(17, 184);
+            this.btnSair.Location = new System.Drawing.Point(17, 367);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 23);
             this.btnSair.TabIndex = 11;
@@ -195,11 +195,39 @@
             this.panel1.Controls.Add(this.btnCadastrar);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.Prato);
-            this.panel1.Location = new System.Drawing.Point(24, 89);
+            this.panel1.Location = new System.Drawing.Point(85, 96);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(609, 308);
+            this.panel1.Size = new System.Drawing.Size(497, 308);
             this.panel1.TabIndex = 2;
+            // 
+            // txtCPF
+            // 
+            this.txtCPF.Location = new System.Drawing.Point(310, 101);
+            this.txtCPF.Mask = "000,000,000-00";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(88, 20);
+            this.txtCPF.TabIndex = 16;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(310, 207);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 20);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.UseSystemPasswordChar = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(307, 188);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 17);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Confirmar Senha";
             // 
             // label4
             // 
@@ -306,7 +334,7 @@
             this.btnCadastrar.BackColor = System.Drawing.Color.MediumPurple;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCadastrar.Location = new System.Drawing.Point(62, 256);
+            this.btnCadastrar.Location = new System.Drawing.Point(62, 259);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(66, 25);
@@ -334,40 +362,14 @@
             this.Prato.TabIndex = 0;
             this.Prato.Text = "Nome";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(310, 207);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.UseSystemPasswordChar = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(307, 188);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 17);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Confirmar Senha";
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Location = new System.Drawing.Point(310, 101);
-            this.txtCPF.Mask = "000,000,000-00";
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(88, 20);
-            this.txtCPF.TabIndex = 16;
-            // 
             // CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CadastroFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Funcionario";

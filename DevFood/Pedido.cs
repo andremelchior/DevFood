@@ -45,30 +45,48 @@ namespace DevFood
         {
             var conn = new Dao();
 
-            if (conn.verificarPratos())
+            try
             {
-                cmbItem1.Items.Clear();
-                cmbItem2.Items.Clear();
-                cmbItem3.Items.Clear();
-                cmbItem4.Items.Clear();
-                cmbItem5.Items.Clear();
-                cmbItem1.Text = "[Selecione]";
-                cmbItem2.Text = "[Selecione]";
-                cmbItem3.Text = "[Selecione]";
-                cmbItem4.Text = "[Selecione]";
-                cmbItem5.Text = "[Selecione]";
-
-                string[] pratos = new string[3];
-
-                for (int i = 0; i < pratos.Length; i++)
+                if (conn.verificarPratos() > 0)
                 {
-                    pratos[i] = conn.pegarPrato(i + 1);
-                    cmbItem1.Items.Add(pratos[i]);
-                    cmbItem2.Items.Add(pratos[i]);
-                    cmbItem3.Items.Add(pratos[i]);
-                    cmbItem4.Items.Add(pratos[i]);
-                    cmbItem5.Items.Add(pratos[i]);
+                    cmbItem1.Items.Clear();
+                    cmbItem2.Items.Clear();
+                    cmbItem3.Items.Clear();
+                    cmbItem4.Items.Clear();
+                    cmbItem5.Items.Clear();
+                    cmbItem1.Text = "[Selecione]";
+                    cmbItem2.Text = "[Selecione]";
+                    cmbItem3.Text = "[Selecione]";
+                    cmbItem4.Text = "[Selecione]";
+                    cmbItem5.Text = "[Selecione]";
+
+                    string[] pratos = new string[conn.verificarPratos()];
+                    int tamanho = conn.verificarPratos();
+
+                    int j = 0;
+                    for (int i = 0; i < pratos.Length; i++)
+                    {
+                        j++;
+                        while(true)//1 = null? (V)
+                        {
+                            if (conn.pegarPrato(j) != null)
+                            {
+                                pratos[i] = conn.pegarPrato(j);
+                                cmbItem1.Items.Add(pratos[i]);
+                                cmbItem2.Items.Add(pratos[i]);
+                                cmbItem3.Items.Add(pratos[i]);
+                                cmbItem4.Items.Add(pratos[i]);
+                                cmbItem5.Items.Add(pratos[i]);
+                                break;
+                            }
+                            j++;
+                        }
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar os pratos: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -11,9 +11,9 @@ namespace Users
     {
         public string Cargo { get; set; }
 
-        public override string exibirDados()
+        public override string exibirDados(Funcionario F)
         {
-            string mensagem = $"Id: {Id}\nNome: {Nome}\nCargo: {Cargo}\nEmail: {Email}\nCPF: {Cpf}\nSenha: {Senha}";
+            string mensagem = $"Id: {F.Id}\nNome: {F.Nome}\nCargo: {F.Cargo}\nEmail: {F.Email}\nCPF: {F.Cpf}\nSenha: {F.Senha}";
             return mensagem;
         }
 

@@ -17,6 +17,10 @@ namespace DevFood
         public Home()
         {
             InitializeComponent();
+            if (LoginFuncionario.f.Cargo != "administrador" && LoginFuncionario.f.Cargo != "gerente")
+            {
+                btnFuncionario.Enabled = false;
+            }
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -78,9 +82,7 @@ namespace DevFood
 
         private void Home_Load(object sender, EventArgs e)
         {
-            Funcionario F = new Funcionario();
-            var connect = new Dao();
-            lblHome.Text = $"Olá, seja bem-vindo(a) {connect.username(LoginFuncionario.f)}! DevFood é um sistema de gerenciamento de " +
+            lblHome.Text = $"Olá, seja bem-vindo(a) {LoginFuncionario.f.Nome}! DevFood é um sistema de gerenciamento de " +
                 $"pedidos, pratos e funcionarios de um restaurante. Você consegue acessar as guias através da barra lateral de navegação, " +
                 $"contendo no menu a página de Home, Pedido, Pratos e Cadastro de Funcionarios.";
         }

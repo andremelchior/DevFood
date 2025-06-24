@@ -54,9 +54,9 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(-1, -10);
+            this.panel2.Location = new System.Drawing.Point(-3, -10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(401, 385);
+            this.panel2.Size = new System.Drawing.Size(403, 385);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -139,7 +139,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 97);
+            this.label2.Location = new System.Drawing.Point(8, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
@@ -185,11 +185,11 @@
             // 
             // txtCpf
             // 
-            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txtCpf.Location = new System.Drawing.Point(11, 113);
             this.txtCpf.Mask = "000,000,000-00";
             this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(229, 26);
+            this.txtCpf.Size = new System.Drawing.Size(229, 24);
             this.txtCpf.TabIndex = 13;
             this.txtCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCpf_MaskInputRejected);
             this.txtCpf.Click += new System.EventHandler(this.txtCpf_Click);

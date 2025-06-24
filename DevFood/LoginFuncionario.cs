@@ -75,7 +75,6 @@ namespace DevFood
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-
             DialogResult result = MessageBox.Show("Você tem certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {

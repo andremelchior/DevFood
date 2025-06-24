@@ -36,6 +36,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodFunc = new System.Windows.Forms.TextBox();
+            this.lblCodFunc = new System.Windows.Forms.Label();
+            this.btnFazerPedido = new System.Windows.Forms.Button();
             this.lblTaxa2 = new System.Windows.Forms.Label();
             this.txtTaxa2 = new System.Windows.Forms.TextBox();
             this.cmbItem5 = new System.Windows.Forms.ComboBox();
@@ -69,9 +72,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumeroPedido = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnFazerPedido = new System.Windows.Forms.Button();
-            this.txtCodFunc = new System.Windows.Forms.TextBox();
-            this.lblCodFunc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -111,7 +111,7 @@
             this.btnFechar.BackColor = System.Drawing.Color.MediumPurple;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFechar.Location = new System.Drawing.Point(17, 219);
+            this.btnFechar.Location = new System.Drawing.Point(17, 402);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(86, 23);
             this.btnFechar.TabIndex = 14;
@@ -124,7 +124,7 @@
             this.btnSair.BackColor = System.Drawing.Color.MediumPurple;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSair.Location = new System.Drawing.Point(17, 184);
+            this.btnSair.Location = new System.Drawing.Point(17, 367);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(86, 23);
             this.btnSair.TabIndex = 13;
@@ -227,6 +227,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(609, 359);
             this.panel1.TabIndex = 3;
+            // 
+            // txtCodFunc
+            // 
+            this.txtCodFunc.Location = new System.Drawing.Point(134, 96);
+            this.txtCodFunc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodFunc.Name = "txtCodFunc";
+            this.txtCodFunc.Size = new System.Drawing.Size(68, 20);
+            this.txtCodFunc.TabIndex = 37;
+            // 
+            // lblCodFunc
+            // 
+            this.lblCodFunc.AutoSize = true;
+            this.lblCodFunc.Location = new System.Drawing.Point(27, 98);
+            this.lblCodFunc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodFunc.Name = "lblCodFunc";
+            this.lblCodFunc.Size = new System.Drawing.Size(90, 13);
+            this.lblCodFunc.TabIndex = 36;
+            this.lblCodFunc.Text = "Cod. Funcionario:";
+            // 
+            // btnFazerPedido
+            // 
+            this.btnFazerPedido.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnFazerPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFazerPedido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnFazerPedido.Location = new System.Drawing.Point(30, 312);
+            this.btnFazerPedido.Name = "btnFazerPedido";
+            this.btnFazerPedido.Size = new System.Drawing.Size(103, 23);
+            this.btnFazerPedido.TabIndex = 35;
+            this.btnFazerPedido.Text = "Cadastrar Pedido";
+            this.btnFazerPedido.UseVisualStyleBackColor = false;
+            this.btnFazerPedido.Click += new System.EventHandler(this.btnFazerPedido_Click);
             // 
             // lblTaxa2
             // 
@@ -559,44 +590,15 @@
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Pedido";
             // 
-            // btnFazerPedido
-            // 
-            this.btnFazerPedido.BackColor = System.Drawing.Color.MediumPurple;
-            this.btnFazerPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFazerPedido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFazerPedido.Location = new System.Drawing.Point(30, 312);
-            this.btnFazerPedido.Name = "btnFazerPedido";
-            this.btnFazerPedido.Size = new System.Drawing.Size(103, 23);
-            this.btnFazerPedido.TabIndex = 35;
-            this.btnFazerPedido.Text = "Cadastrar Pedido";
-            this.btnFazerPedido.UseVisualStyleBackColor = false;
-            this.btnFazerPedido.Click += new System.EventHandler(this.btnFazerPedido_Click);
-            // 
-            // txtCodFunc
-            // 
-            this.txtCodFunc.Location = new System.Drawing.Point(134, 96);
-            this.txtCodFunc.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodFunc.Name = "txtCodFunc";
-            this.txtCodFunc.Size = new System.Drawing.Size(68, 20);
-            this.txtCodFunc.TabIndex = 37;
-            // 
-            // lblCodFunc
-            // 
-            this.lblCodFunc.AutoSize = true;
-            this.lblCodFunc.Location = new System.Drawing.Point(27, 98);
-            this.lblCodFunc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCodFunc.Name = "lblCodFunc";
-            this.lblCodFunc.Size = new System.Drawing.Size(90, 13);
-            this.lblCodFunc.TabIndex = 36;
-            this.lblCodFunc.Text = "Cod. Funcionario:";
-            // 
             // frmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
