@@ -79,7 +79,7 @@ CREATE TABLE Pedido_Prato(
 select * from Pedido_Prato;
 
 INSERT INTO Funcionario (cod_funcionario, nome, email, cargo, cpf, senha)
-VALUES (default, "admin", "admin@gmail.com", "administrador", "123456", "123");
+VALUES (default, "ADMIN", "admin@gmail.com", "administrador", "12345678910", "123");
 
 show tables;
 

@@ -76,12 +76,12 @@ namespace DevFood
         {
             Funcionario funcionario = new Funcionario();
 
-            funcionario.cadastrar(txtId.Text, txtNome.Text, txtEmail.Text, txtCargo.Text, txtCPF.Text, txtSenha.Text);
+            funcionario.cadastrar(int.Parse(txtId.Text), txtNome.Text, txtEmail.Text, txtCargo.Text, txtCPF.Text, txtSenha.Text);
 
             var conn = new DAO.Dao();
             if(conn.cadastrarFuncionario(funcionario))
             {
-                MessageBox.Show("Funcionário cadastrado com sucesso!");
+                MessageBox.Show("Funcionário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNome.Clear();
                 txtCPF.Clear();
                 txtSenha.Clear();
