@@ -19,6 +19,12 @@ namespace DevFood
             rdComTaxas.Checked = true;
             chkTaxa1.Checked = true;
 
+            if (LoginFuncionario.f.Cargo != "administrador" && LoginFuncionario.f.Cargo != "gerente")
+            {
+                btnFuncionario.Visible = false;
+                btnPratos.Visible = false;
+            }
+
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.FlatAppearance.BorderSize = 0;
             btnSair.FlatAppearance.BorderColor = btnSair.BackColor;

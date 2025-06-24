@@ -19,7 +19,13 @@ namespace Users
 
         public override void cadastrar(int? id, string nome, string cargo, string email, string cpf, string senha)
         {
-            base.cadastrar(id, nome, cargo, email, cpf, senha);
+            base.cadastrar(id, nome, email, cpf, senha);
+            this.Cargo = cargo;
+        }
+
+        public override void cadastrar(string nome, string cargo, string email, string cpf, string senha)
+        {
+            base.cadastrar(nome, email, cpf, senha);
             this.Cargo = cargo;
         }
 

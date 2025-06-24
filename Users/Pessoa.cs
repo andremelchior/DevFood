@@ -51,9 +51,29 @@ namespace Users
             }
         }
 
+        public void cadastrar(string nome, string email, string cpf, string senha)
+        {
+            if (nome != null && email != null && cpf != null && senha != null)
+            {
+                this.Nome = nome;
+                this.Email = email;
+                this.Cpf = cpf;
+                this.Senha = senha;
+            }
+            else
+            {
+                throw new ArgumentException("Todos os campos devem ser preenchidos.");
+            }
+        }
+
         public virtual void cadastrar(int? id, string nome, string cargo, string email, string cpf, string senha)
         {
             this.cadastrar(id, nome, email, cpf, senha);
+        }
+
+        public virtual void cadastrar(string nome, string cargo, string email, string cpf, string senha)
+        {
+            this.cadastrar(nome, email, cpf, senha);
         }
 
     }

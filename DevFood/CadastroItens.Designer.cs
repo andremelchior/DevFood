@@ -204,6 +204,7 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLimpar.Location = new System.Drawing.Point(266, 202);
             this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
@@ -292,6 +293,7 @@
             // btnCaadastrar
             // 
             this.btnCaadastrar.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnCaadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCaadastrar.Location = new System.Drawing.Point(145, 202);
             this.btnCaadastrar.Margin = new System.Windows.Forms.Padding(2);

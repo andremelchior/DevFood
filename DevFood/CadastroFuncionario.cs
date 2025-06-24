@@ -128,23 +128,135 @@ namespace DevFood
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Funcionario funcionario = new Funcionario();
-
-            funcionario.cadastrar(int.Parse(txtId.Text), txtNome.Text, txtEmail.Text, txtCargo.Text, txtCPF.Text, txtSenha.Text);
-
-            var conn = new DAO.Dao();
-            if(conn.cadastrarFuncionario(funcionario))
+            if(txtSenha.Text == txtConfirmarSenha.Text)
             {
-                MessageBox.Show("Funcionário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtNome.Clear();
-                txtCPF.Clear();
-                txtSenha.Clear();
-                txtCargo.Clear();
-                txtEmail.Clear();
+                Funcionario funcionario = new Funcionario();
+
+
+                if (txtId.Text == "")
+                {
+                    funcionario.cadastrar(txtNome.Text, txtCargo.Text, txtEmail.Text, txtCPF.Text, txtSenha.Text);
+                }
+                else
+                {
+                    funcionario.cadastrar(int.Parse(txtId.Text), txtNome.Text, txtCargo.Text, txtEmail.Text, txtCPF.Text, txtSenha.Text);
+                }
+
+
+                var conn = new DAO.Dao();
+                if(conn.cadastrarFuncionario(funcionario))
+                {
+                    MessageBox.Show("Funcionário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNome.Clear();
+                    txtCPF.Clear();
+                    txtSenha.Clear();
+                    txtCargo.Clear();
+                    txtEmail.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar funcionário.");
+                }
             }
             else
             {
-                MessageBox.Show("Erro ao cadastrar funcionário.");
+                MessageBox.Show("Erro! As senhas não coincidem, verifique e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void txtCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void CadastroFuncionario_Load(object sender, EventArgs e)
+        {
+            txtCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == txtConfirmarSenha.Text)
+            {
+                Funcionario funcionario = new Funcionario();
+
+                funcionario.cadastrar(int.Parse(txtId.Text), txtNome.Text, txtCargo.Text, txtEmail.Text, txtCPF.Text, txtSenha.Text);
+
+                var conn = new DAO.Dao();
+                if (conn.atualizarFuncionario(funcionario))
+                {
+                    MessageBox.Show("Funcionário atualizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtNome.Clear();
+                    txtCPF.Clear();
+                    txtSenha.Clear();
+                    txtCargo.Clear();
+                    txtEmail.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao atualizar funcionário.");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Erro! As senhas não coincidem, verifique e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            Funcionario f = new Funcionario();
+
+            f.Id = int.Parse(txtId.Text);
+
+            var conn = new DAO.Dao();
+            if (conn.consultarFuncionario(f))
+            {
+                txtNome.Text = f.Nome;
+                txtEmail.Text = f.Email;
+                txtCargo.Text = f.Cargo;
+                txtCPF.Text = f.Cpf;
+                txtSenha.Text = f.Senha;
+                txtSenha.UseSystemPasswordChar = false;
+                txtConfirmarSenha.Clear();
+                MessageBox.Show($"Funcionário {f.Nome} encontrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Funcionário não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNome.Clear();
+            txtCPF.Clear();
+            txtSenha.Clear();
+            txtCargo.Clear();
+            txtEmail.Clear();
+            txtId.Clear();
+            txtSenha.UseSystemPasswordChar = true;
+            MessageBox.Show("Formulário limpo com sucesso!", "Limpeza", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            txtSenha.UseSystemPasswordChar = true;
+
+            Funcionario f = new Funcionario();
+
+            f.Id = int.Parse(txtId.Text);
+
+            var conn = new DAO.Dao();
+            if (conn.deletarFuncionario(f))
+            {
+                MessageBox.Show($"Funcionário {f.Nome} deletado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Erro! Não foi possivel deletar o funcionário.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

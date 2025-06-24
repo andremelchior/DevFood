@@ -99,7 +99,7 @@ namespace DAO
             }
         }
 
-        public void updateUsuario()
+        public bool atualizarFuncionario(Funcionario F)
         {
             try
             {
@@ -111,18 +111,24 @@ namespace DAO
                 //trocar o sql para cada caso especifico (
                 //insert, delete, update)
                 String sql = "UPDATE funcionario SET nome = @nome, " +
-                    "email = @email, " + "senha = @senha " + "WHERE id = @id";
+                    "email = @email, " + "cargo = @cargo, cpf = @cpf, " +
+                    "senha = @senha " + "WHERE cod_funcionario = @id";
                 MySqlCommand cmd = new MySqlCommand(sql, mConn);
-                cmd.Parameters.AddWithValue("@id", user.Id);
-                cmd.Parameters.AddWithValue("@nome", user.Nome);
-                cmd.Parameters.AddWithValue("@email", user.Email);
-                cmd.Parameters.AddWithValue("@senha", user.Senha);
 
-                var linhas = cmd.ExecuteNonQuery();
+                cmd.Parameters.AddWithValue("@id", F.Id);
+                cmd.Parameters.AddWithValue("@nome", F.Nome);
+                cmd.Parameters.AddWithValue("@email", F.Email);
+                cmd.Parameters.AddWithValue("@cargo", F.Cargo);
+                cmd.Parameters.AddWithValue("@cpf", F.Cpf);
+                cmd.Parameters.AddWithValue("@senha", F.Senha);
+
+                int linhas = cmd.ExecuteNonQuery();
+                return linhas > 0;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return false;
                 throw ex;
             }
             finally
@@ -309,6 +315,100 @@ namespace DAO
             catch (Exception ex)
             {
                 Console.WriteLine("Erro! não foi possivel cadastrar o funcionario. \n\n" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                mConn.Close();
+            }
+        }
+
+        public bool consultarFuncionario(Funcionario F) {
+            try
+            {
+                if (mConn.State != ConnectionState.Open)
+                {
+                    mConn.Open();
+                }
+
+                this.sql = $"SELECT * FROM Funcionario WHERE cod_funcionario = @cod_funcionario";
+                MySqlCommand cmd = new MySqlCommand(this.sql, mConn);
+                cmd.Parameters.AddWithValue("@cod_funcionario", F.Id);
+
+                MySqlDataReader rdr = cmd.ExecuteReader(); 
+                rdr.Read(); 
+
+                if (rdr.HasRows)
+                {
+                    F.Id = Convert.ToInt32(rdr["cod_funcionario"]);
+                    F.Nome = rdr["nome"].ToString().ToUpper();
+                    F.Email = rdr["email"].ToString();
+                    F.Cargo = rdr["cargo"].ToString().ToLower();
+                    F.Cpf = rdr["cpf"].ToString();
+                    F.Senha = rdr["senha"].ToString();
+
+                    if (rdr["cod_funcionario"].ToString().Equals(F.Id))
+                    {
+                        rdr.Close();
+                        Console.WriteLine("Dados conferem, ação executada com sucesso.");
+                    }
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Erro! Funcionário não existe.");
+                    rdr.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro! não foi possível verificar o funcionário. \n" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                mConn.Close();
+            }
+
+        }
+
+        public bool deletarFuncionario(Funcionario F)
+        {
+            try
+            {
+                if (mConn.State != ConnectionState.Open)
+                {
+                    mConn.Open();
+                }
+
+                this.sql = "SELECT nome FROM Funcionario WHERE cod_funcionario = @id";
+                MySqlCommand cmd = new MySqlCommand(this.sql, mConn);
+                cmd.Parameters.AddWithValue("@id", F.Id);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                rdr.Read();
+
+                if (rdr.HasRows)
+                {
+                    F.Nome = rdr["nome"].ToString();
+
+                    this.sql = "DELETE FROM Funcionario WHERE cod_funcionario = @id";
+                    cmd = new MySqlCommand(this.sql, mConn);
+
+
+                    int linhas = cmd.ExecuteNonQuery();
+                    return linhas > 0;
+                }
+                else
+                {
+                    Console.WriteLine("Erro! Funcionário não existe.");
+                    rdr.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro! não foi possível deletar o funcionário. \n" + ex.Message);
                 return false;
             }
             finally

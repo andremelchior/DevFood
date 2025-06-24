@@ -31,9 +31,9 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFuncionario = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPratos = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCodFunc = new System.Windows.Forms.TextBox();
@@ -91,9 +91,9 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.MediumPurple;
             this.splitContainer1.Panel1.Controls.Add(this.btnFechar);
             this.splitContainer1.Panel1.Controls.Add(this.btnSair);
-            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.btnFuncionario);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.btnPratos);
             this.splitContainer1.Panel1.Controls.Add(this.button5);
             // 
             // splitContainer1.Panel2
@@ -134,19 +134,19 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // button4
+            // btnFuncionario
             // 
-            this.button4.BackColor = System.Drawing.Color.MediumPurple;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(-13, 151);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 40);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Funcionario";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnFuncionario.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFuncionario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnFuncionario.Location = new System.Drawing.Point(-13, 151);
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.Size = new System.Drawing.Size(146, 40);
+            this.btnFuncionario.TabIndex = 11;
+            this.btnFuncionario.Text = "Funcionario";
+            this.btnFuncionario.UseVisualStyleBackColor = false;
+            this.btnFuncionario.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -163,19 +163,19 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnPratos
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumPurple;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(-13, 112);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 40);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Pratos";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPratos.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnPratos.FlatAppearance.BorderSize = 0;
+            this.btnPratos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPratos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPratos.Location = new System.Drawing.Point(-13, 112);
+            this.btnPratos.Name = "btnPratos";
+            this.btnPratos.Size = new System.Drawing.Size(146, 40);
+            this.btnPratos.TabIndex = 9;
+            this.btnPratos.Text = "Pratos";
+            this.btnPratos.UseVisualStyleBackColor = false;
+            this.btnPratos.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
@@ -655,9 +655,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNumeroPedido;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPratos;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblTaxa2;
         private System.Windows.Forms.TextBox txtTaxa2;

@@ -19,7 +19,8 @@ namespace DevFood
             InitializeComponent();
             if (LoginFuncionario.f.Cargo != "administrador" && LoginFuncionario.f.Cargo != "gerente")
             {
-                btnFuncionario.Enabled = false;
+                btnFuncionario.Visible = false;
+                btnPratos.Visible = false;
             }
             btnSair.FlatStyle = FlatStyle.Flat;
             btnSair.FlatAppearance.BorderSize = 0;

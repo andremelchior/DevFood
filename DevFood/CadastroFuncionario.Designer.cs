@@ -37,8 +37,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -53,6 +56,7 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.Prato = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -177,16 +181,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(164, 33);
+            this.label1.Location = new System.Drawing.Point(113, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(365, 33);
+            this.label1.Size = new System.Drawing.Size(454, 33);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Cadastro de Funcionario";
+            this.label1.Text = "Gerenciamento de Funcionario";
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnLimpar);
+            this.panel1.Controls.Add(this.btnDeletar);
+            this.panel1.Controls.Add(this.btnConsultar);
+            this.panel1.Controls.Add(this.btnAtualizar);
             this.panel1.Controls.Add(this.txtCPF);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtConfirmarSenha);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.txtId);
@@ -201,11 +209,53 @@
             this.panel1.Controls.Add(this.btnCadastrar);
             this.panel1.Controls.Add(this.txtNome);
             this.panel1.Controls.Add(this.Prato);
-            this.panel1.Location = new System.Drawing.Point(85, 96);
+            this.panel1.Location = new System.Drawing.Point(85, 94);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(497, 308);
             this.panel1.TabIndex = 2;
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.BackColor = System.Drawing.Color.Crimson;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDeletar.Location = new System.Drawing.Point(287, 259);
+            this.btnDeletar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(66, 25);
+            this.btnDeletar.TabIndex = 19;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnConsultar.Location = new System.Drawing.Point(212, 259);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(66, 25);
+            this.btnConsultar.TabIndex = 18;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAtualizar.Location = new System.Drawing.Point(137, 259);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(66, 25);
+            this.btnAtualizar.TabIndex = 17;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtCPF
             // 
@@ -214,15 +264,16 @@
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(88, 20);
             this.txtCPF.TabIndex = 16;
+            this.txtCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtCPF_MaskInputRejected);
             // 
-            // textBox1
+            // txtConfirmarSenha
             // 
-            this.textBox1.Location = new System.Drawing.Point(310, 207);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 20);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txtConfirmarSenha.Location = new System.Drawing.Point(310, 207);
+            this.txtConfirmarSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtConfirmarSenha.Name = "txtConfirmarSenha";
+            this.txtConfirmarSenha.Size = new System.Drawing.Size(150, 20);
+            this.txtConfirmarSenha.TabIndex = 15;
+            this.txtConfirmarSenha.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -242,9 +293,9 @@
             this.label4.Location = new System.Drawing.Point(135, 34);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(112, 13);
             this.label4.TabIndex = 13;
-            this.label4.Text = "(Opcional)";
+            this.label4.Text = "(Opcional no cadastro)";
             // 
             // txtId
             // 
@@ -368,6 +419,20 @@
             this.Prato.TabIndex = 0;
             this.Prato.Text = "Nome";
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnLimpar.Location = new System.Drawing.Point(364, 259);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(66, 25);
+            this.btnLimpar.TabIndex = 20;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // CadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +444,7 @@
             this.Name = "CadastroFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Funcionario";
+            this.Load += new System.EventHandler(this.CadastroFuncionario_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
@@ -414,8 +480,12 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConfirmarSenha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
