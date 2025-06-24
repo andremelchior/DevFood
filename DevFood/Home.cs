@@ -1,4 +1,4 @@
-﻿using PessoaFuncionario;
+﻿using Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +17,18 @@ namespace DevFood
         public Home()
         {
             InitializeComponent();
+            if (LoginFuncionario.f.Cargo != "administrador" && LoginFuncionario.f.Cargo != "gerente")
+            {
+                btnFuncionario.Visible = false;
+                btnPratos.Visible = false;
+            }
+            btnSair.FlatStyle = FlatStyle.Flat;
+            btnSair.FlatAppearance.BorderSize = 0;
+            btnSair.FlatAppearance.BorderColor = btnSair.BackColor;
+
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatAppearance.BorderColor = btnSair.BackColor;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -78,22 +90,74 @@ namespace DevFood
 
         private void Home_Load(object sender, EventArgs e)
         {
-            Funcionario F = new Funcionario();
-            var connect = new Dao();
-            lblHome.Text = $"Olá, seja bem-vindo(a) {connect.username(LoginFuncionario.f)}! DevFood é um sistema de gerenciamento de " +
+            lblHome.Text = $"Olá, seja bem-vindo(a) {LoginFuncionario.f.Nome}! DevFood é um sistema de gerenciamento de " +
                 $"pedidos, pratos e funcionarios de um restaurante. Você consegue acessar as guias através da barra lateral de navegação, " +
                 $"contendo no menu a página de Home, Pedido, Pratos e Cadastro de Funcionarios.";
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            btnFechar.BackColor = Color.FromArgb(132, 100, 197);
+
+            DialogResult result = MessageBox.Show("Você tem certeza que deseja fechar o programa?", "Fechar sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SaindoMsg fechando = new SaindoMsg();
+
+
+                Timer timer = new Timer();
+                timer.Interval = 2000;
+                timer.Tick += (s, args) =>
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                    Application.Exit();
+                };
+                timer.Start();
+                fechando.lblMsg.Text = "Fechando...";
+                fechando.Show();
+            }
+            else
+            {
+                MessageBox.Show("Você cancelou a ação de fechar o programa.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnFechar.BackColor = Color.MediumPurple;
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            var lg = new LoginFuncionario();
-            lg.Show();
+            btnSair.BackColor = Color.FromArgb(132, 100, 197);
+
+            DialogResult result = MessageBox.Show("Você tem certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SaindoMsg saindo = new SaindoMsg();
+
+
+                Timer timer = new Timer();
+                timer.Interval = 2000;
+                timer.Tick += (s, args) =>
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                    this.Hide();
+                    var lg = new LoginFuncionario();
+                    lg.Show();
+                };
+                timer.Start();
+                saindo.Show();
+            }
+            else
+            {
+                MessageBox.Show("Você cancelou a ação de sair.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnSair.BackColor = Color.MediumPurple;
+            }
+        }
+
+        private void btnFuncionario_Click(object sender, EventArgs e)
+        {
+            var fun = new CadastroFuncionario();
+            fun.Show();
             this.Hide();
         }
     }

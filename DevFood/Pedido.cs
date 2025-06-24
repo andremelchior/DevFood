@@ -19,6 +19,19 @@ namespace DevFood
             rdComTaxas.Checked = true;
             chkTaxa1.Checked = true;
 
+            if (LoginFuncionario.f.Cargo != "administrador" && LoginFuncionario.f.Cargo != "gerente")
+            {
+                btnFuncionario.Visible = false;
+                btnPratos.Visible = false;
+            }
+
+            btnSair.FlatStyle = FlatStyle.Flat;
+            btnSair.FlatAppearance.BorderSize = 0;
+            btnSair.FlatAppearance.BorderColor = btnSair.BackColor;
+
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatAppearance.BorderColor = btnSair.BackColor;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,30 +58,48 @@ namespace DevFood
         {
             var conn = new Dao();
 
-            if (conn.verificarPratos())
+            try
             {
-                cmbItem1.Items.Clear();
-                cmbItem2.Items.Clear();
-                cmbItem3.Items.Clear();
-                cmbItem4.Items.Clear();
-                cmbItem5.Items.Clear();
-                cmbItem1.Text = "[Selecione]";
-                cmbItem2.Text = "[Selecione]";
-                cmbItem3.Text = "[Selecione]";
-                cmbItem4.Text = "[Selecione]";
-                cmbItem5.Text = "[Selecione]";
-
-                string[] pratos = new string[3];
-
-                for (int i = 0; i < pratos.Length; i++)
+                if (conn.verificarPratos() > 0)
                 {
-                    pratos[i] = conn.pegarPrato(i + 1);
-                    cmbItem1.Items.Add(pratos[i]);
-                    cmbItem2.Items.Add(pratos[i]);
-                    cmbItem3.Items.Add(pratos[i]);
-                    cmbItem4.Items.Add(pratos[i]);
-                    cmbItem5.Items.Add(pratos[i]);
+                    cmbItem1.Items.Clear();
+                    cmbItem2.Items.Clear();
+                    cmbItem3.Items.Clear();
+                    cmbItem4.Items.Clear();
+                    cmbItem5.Items.Clear();
+                    cmbItem1.Text = "[Selecione]";
+                    cmbItem2.Text = "[Selecione]";
+                    cmbItem3.Text = "[Selecione]";
+                    cmbItem4.Text = "[Selecione]";
+                    cmbItem5.Text = "[Selecione]";
+
+                    string[] pratos = new string[conn.verificarPratos()];
+                    int tamanho = conn.verificarPratos();
+
+                    int j = 0;
+                    for (int i = 0; i < pratos.Length; i++)
+                    {
+                        j++;
+                        while(true)//1 = null? (V)
+                        {
+                            if (conn.pegarPrato(j) != null)
+                            {
+                                pratos[i] = conn.pegarPrato(j);
+                                cmbItem1.Items.Add(pratos[i]);
+                                cmbItem2.Items.Add(pratos[i]);
+                                cmbItem3.Items.Add(pratos[i]);
+                                cmbItem4.Items.Add(pratos[i]);
+                                cmbItem5.Items.Add(pratos[i]);
+                                break;
+                            }
+                            j++;
+                        }
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao carregar os pratos: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -263,14 +294,60 @@ namespace DevFood
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            btnFechar.BackColor = Color.FromArgb(132, 100, 197);
+
+            DialogResult result = MessageBox.Show("Você tem certeza que deseja fechar o programa?", "Fechar sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SaindoMsg fechando = new SaindoMsg();
+
+
+                Timer timer = new Timer();
+                timer.Interval = 2000;
+                timer.Tick += (s, args) =>
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                    Application.Exit();
+                };
+                timer.Start();
+                fechando.lblMsg.Text = "Fechando...";
+                fechando.Show();
+            }
+            else
+            {
+                MessageBox.Show("Você cancelou a ação de fechar o programa.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnFechar.BackColor = Color.MediumPurple;
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            var lg = new LoginFuncionario();
-            lg.Show();
-            this.Hide();
+            btnSair.BackColor = Color.FromArgb(132, 100, 197);
+            DialogResult result = MessageBox.Show("Você tem certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SaindoMsg saindo = new SaindoMsg();
+
+
+                Timer timer = new Timer();
+                timer.Interval = 2000;
+                timer.Tick += (s, args) =>
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                    this.Hide();
+                    var lg = new LoginFuncionario();
+                    lg.Show();
+                };
+                timer.Start();
+                saindo.Show();
+            }
+            else
+            {
+                MessageBox.Show("Você cancelou a ação de sair.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnSair.BackColor = Color.MediumPurple;
+            }
         }
 
         private void btnFazerPedido_Click(object sender, EventArgs e)

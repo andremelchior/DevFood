@@ -16,6 +16,14 @@ namespace DevFood
         public CadastroItens()
         {
             InitializeComponent();
+
+            btnSair.FlatStyle = FlatStyle.Flat;
+            btnSair.FlatAppearance.BorderSize = 0;
+            btnSair.FlatAppearance.BorderColor = btnSair.BackColor;
+
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatAppearance.BorderColor = btnSair.BackColor;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -60,7 +68,31 @@ namespace DevFood
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            btnFechar.BackColor = Color.FromArgb(132, 100, 197);
+
+            DialogResult result = MessageBox.Show("Você tem certeza que deseja fechar o programa?", "Fechar sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SaindoMsg fechando = new SaindoMsg();
+
+
+                Timer timer = new Timer();
+                timer.Interval = 2000;
+                timer.Tick += (s, args) =>
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                    Application.Exit();
+                };
+                timer.Start();
+                fechando.lblMsg.Text = "Fechando...";
+                fechando.Show();
+            }
+            else
+            {
+                MessageBox.Show("Você cancelou a ação de fechar o programa.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnFechar.BackColor = Color.MediumPurple;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -72,9 +104,32 @@ namespace DevFood
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            var lg = new LoginFuncionario();
-            lg.Show();
-            this.Hide();
+            btnSair.BackColor = Color.FromArgb(132, 100, 197);
+
+            DialogResult result = MessageBox.Show("Você tem certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                SaindoMsg saindo = new SaindoMsg();
+
+
+                Timer timer = new Timer();
+                timer.Interval = 2000;
+                timer.Tick += (s, args) =>
+                {
+                    timer.Stop();
+                    timer.Dispose();
+                    this.Hide();
+                    var lg = new LoginFuncionario();
+                    lg.Show();
+                };
+                timer.Start();
+                saindo.Show();
+            }
+            else
+            {
+                MessageBox.Show("Você cancelou a ação de sair.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnSair.BackColor = Color.MediumPurple;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

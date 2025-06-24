@@ -21,14 +21,16 @@ CREATE TABLE Mesa(
     capacidade int,
     status_mesa enum('livre', 'ocupada', 'reservada') default 'livre',
     CONSTRAINT pk_cod_mesa PRIMARY KEY (cod_mesa),
-	CONSTRAINT un_numMesa UNIQUE(numero)
+	CONSTRAINT un_numMesa UNIQUE(numero),
+    CONSTRAINT ch_statusMesa CHECK(status_mesa IN ('livre', 'ocupada', 'reservada'))
 );
 
 CREATE TABLE Categoria(
 	cod_categoria bigint not null auto_increment,
 	tipo_categoria enum('Entrada', 'Prato Principal', 'Sobremesa', 'Acompanhamento') not null,
 	CONSTRAINT pk_codCategoria PRIMARY KEY(cod_categoria),
-	CONSTRAINT un_tipoCategoria UNIQUE(tipo_categoria)
+	CONSTRAINT un_tipoCategoria UNIQUE(tipo_categoria),
+	CONSTRAINT ch_tipoCategoria CHECK(tipo_categoria IN ('Entrada', 'Prato Principal', 'Sobremesa', 'Acompanhamento'))
 );
 
 INSERT INTO Categoria (cod_categoria, tipo_categoria)
@@ -77,11 +79,11 @@ CREATE TABLE Pedido_Prato(
 select * from Pedido_Prato;
 
 INSERT INTO Funcionario (cod_funcionario, nome, email, cargo, cpf, senha)
-VALUES (default, "admin", "admin@gmail.com", "administrador", "123456", "123");
+VALUES (default, "ADMIN", "admin@gmail.com", "administrador", "12345678910", "123");
 
 show tables;
 
 SELECT * FROM funcionario;
 SELECT * FROM prato;
 
-delete from prato;
+#delete from prato;

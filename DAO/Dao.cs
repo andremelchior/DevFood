@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PessoaFuncionario;
+using Users;
 using MySql.Data.MySqlClient;
 using System.Data;
 
@@ -12,7 +12,7 @@ namespace DAO
 {
     public class Dao
     {
-        Pessoa user = new Funcionario();
+        Funcionario user = new Funcionario();
 
         public string sql;
         public MySqlConnection mConn;
@@ -20,7 +20,7 @@ namespace DAO
         public Dao()
         {
             string server = "localhost";
-            string port = "3307";
+            string port = "3306";
             string database = "devfood";
             string uid = "root";
 
@@ -38,84 +38,97 @@ namespace DAO
 
         public bool login(Funcionario F)
         {
-            this.sql = "SELECT * FROM Funcionario WHERE cpf =" + "\'" + F.Cpf +
-                "\'" + " AND senha =" + "\'" + F.Senha + "\'"; //consulta e trás dados
-
-            MySqlCommand cmd = new MySqlCommand(this.sql, this.mConn); //responsavel pelas execuções de querys, passando para o construtor o comando + conexão
-            MySqlDataReader rdr = cmd.ExecuteReader(); //lê os dados do banco
-            rdr.Read(); //lê uma linha da consulta
-
-            if (rdr.HasRows) //verifica se há linhas retornadas (se o registro existe no banco)
-            {
-                //compara os valores e verifica se realmente é igual com o banco
-                //se o usuario e senha digitado for igual ao que está no banco
-                if (rdr["cpf"].ToString().Equals(F.Cpf) &&
-                   rdr["senha"].ToString().Equals(F.Senha))
-                {
-                    rdr.Close(); //fechar conexão
-                }
-                return true;
-            }
-            else
-            {
-                rdr.Close();
-                return false;
-            }
-        }
-
-        public string username(Funcionario F)
-        {
             try
             {
+                if (mConn.State != ConnectionState.Open)
+                {
+                    mConn.Open();
+                }
+
                 if (F.Cpf == null || F.Cpf == "")
                 {
                     throw new Exception("CPF não pode ser nulo ou vazio.");
                 }
+                else if (F.Senha == null || F.Senha == "")
+                {
+                    throw new Exception("Senha não pode ser nula ou vazia.");
+                }
                 else
                 {
-                    this.sql = $"SELECT nome FROM Funcionario WHERE cpf = @cpf";
-                    MySqlCommand cmd = new MySqlCommand(this.sql, this.mConn);
+                    this.sql = "SELECT * FROM Funcionario WHERE cpf =" + "\'" + F.Cpf +
+                    "\'" + " AND senha =" + "\'" + F.Senha + "\'"; //consulta e trás dados
 
-                    cmd.Parameters.AddWithValue("@cpf", F.Cpf);
-                    MySqlDataReader rdr = cmd.ExecuteReader();
-                    rdr.Read();
+                    MySqlCommand cmd = new MySqlCommand(this.sql, this.mConn); //responsavel pelas execuções de querys, passando para o construtor o comando + conexão
+                    MySqlDataReader rdr = cmd.ExecuteReader(); //lê os dados do banco
+                    rdr.Read(); //lê uma linha da consulta
 
-                    string nome = rdr["nome"].ToString();
+                    if (rdr.HasRows) //verifica se há linhas retornadas (se o registro existe no banco)
+                    {
+                        F.Id = Convert.ToInt32(rdr["cod_funcionario"]);
+                        F.Nome = rdr["nome"].ToString().ToUpper();
+                        F.Email = rdr["email"].ToString();
+                        F.Cargo = rdr["cargo"].ToString().ToLower();
+                        F.Cpf = rdr["cpf"].ToString();
+                        F.Senha = rdr["senha"].ToString();
 
-                    rdr.Close();
-                    return nome;
+                        //compara os valores e verifica se realmente é igual com o banco
+                        //se o usuario e senha digitado for igual ao que está no banco
+                        if (rdr["cpf"].ToString().Equals(F.Cpf) &&
+                           rdr["senha"].ToString().Equals(F.Senha))
+                        {
+                            rdr.Close(); //fechar conexão
+                        }
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Erro! CPF ou/e Senha inválidos.");
+                        rdr.Close();
+                        return false;
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao obter o nome de usuário: " + ex.Message);
-                return null;
+                Console.WriteLine("Erro ao fazer login: " + ex.Message);
+                return false;
             }
             finally
             {
                 mConn.Close();
             }
-
         }
 
-        public void updateUsuario()
+        public bool atualizarFuncionario(Funcionario F)
         {
             try
-            { //trocar o sql para cada caso especifico (
-              //insert, delete, update)
-                String sql = "UPDATE funcionario SET nome = @nome, " +
-                    "email = @email, " + "senha = @senha " + "WHERE id = @id";
-                MySqlCommand cmd = new MySqlCommand(sql, mConn);
-                cmd.Parameters.AddWithValue("@id", user.Id);
-                cmd.Parameters.AddWithValue("@nome", user.Nome);
-                cmd.Parameters.AddWithValue("@email", user.Email);
-                cmd.Parameters.AddWithValue("@senha", user.Senha);
+            {
+                if (mConn.State != ConnectionState.Open)
+                {
+                    mConn.Open();
+                }
 
-                var linhas = cmd.ExecuteNonQuery();
+                //trocar o sql para cada caso especifico (
+                //insert, delete, update)
+                String sql = "UPDATE funcionario SET nome = @nome, " +
+                    "email = @email, " + "cargo = @cargo, cpf = @cpf, " +
+                    "senha = @senha " + "WHERE cod_funcionario = @id";
+                MySqlCommand cmd = new MySqlCommand(sql, mConn);
+
+                cmd.Parameters.AddWithValue("@id", F.Id);
+                cmd.Parameters.AddWithValue("@nome", F.Nome);
+                cmd.Parameters.AddWithValue("@email", F.Email);
+                cmd.Parameters.AddWithValue("@cargo", F.Cargo);
+                cmd.Parameters.AddWithValue("@cpf", F.Cpf);
+                cmd.Parameters.AddWithValue("@senha", F.Senha);
+
+                int linhas = cmd.ExecuteNonQuery();
+                return linhas > 0;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return false;
                 throw ex;
             }
             finally
@@ -229,14 +242,17 @@ namespace DAO
                 MySqlCommand cmd = new MySqlCommand(this.sql, this.mConn);
                 cmd.Parameters.AddWithValue("@id", id);
                 MySqlDataReader rdr = cmd.ExecuteReader();
-                rdr.Read();
-                string nomePrato = rdr["nome"].ToString();
+                string nomePrato = null;
+                if (rdr.Read())
+                {
+                    nomePrato = rdr["nome"].ToString();
+                }
                 rdr.Close();
                 return nomePrato;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro! não foi possível obter o prato. \n\n" + ex.Message);
+                Console.WriteLine("Erro! não foi possível obter o prato. \n" + ex.Message);
                 return null;
             }
             finally
@@ -276,7 +292,7 @@ namespace DAO
             }
         }
 
-        public bool cadastrarFuncionario(string nome, string email, string cargo, string cpf, string senha)
+        public bool cadastrarFuncionario(Funcionario F)
         {
             try
             {
@@ -284,14 +300,15 @@ namespace DAO
                 {
                     mConn.Open();
                 }
-                this.sql = "INSERT INTO Funcionario (nome, email, cargo, cpf, senha) " +
-                           "VALUES (@nome, @email, @cargo, @cpf, @senha)";
+                this.sql = "INSERT INTO Funcionario (cod_funcionario, nome, email, cargo, cpf, senha) " +
+                           "VALUES (@id, @nome, @email, @cargo, @cpf, @senha)";
                 MySqlCommand cmd = new MySqlCommand(this.sql, mConn);
-                cmd.Parameters.AddWithValue("@nome", nome);
-                cmd.Parameters.AddWithValue("@email", email);
-                cmd.Parameters.AddWithValue("@cargo", cargo);
-                cmd.Parameters.AddWithValue("@cpf", cpf);
-                cmd.Parameters.AddWithValue("@senha", senha);
+                cmd.Parameters.AddWithValue("@id", F.Id);
+                cmd.Parameters.AddWithValue("@nome", F.Nome);
+                cmd.Parameters.AddWithValue("@email", F.Email);
+                cmd.Parameters.AddWithValue("@cargo", F.Cargo);
+                cmd.Parameters.AddWithValue("@cpf", F.Cpf);
+                cmd.Parameters.AddWithValue("@senha", F.Senha);
                 int linhas = cmd.ExecuteNonQuery();
                 return linhas > 0;
             }
@@ -306,7 +323,101 @@ namespace DAO
             }
         }
 
-        public bool verificarPratos()
+        public bool consultarFuncionario(Funcionario F) {
+            try
+            {
+                if (mConn.State != ConnectionState.Open)
+                {
+                    mConn.Open();
+                }
+
+                this.sql = $"SELECT * FROM Funcionario WHERE cod_funcionario = @cod_funcionario";
+                MySqlCommand cmd = new MySqlCommand(this.sql, mConn);
+                cmd.Parameters.AddWithValue("@cod_funcionario", F.Id);
+
+                MySqlDataReader rdr = cmd.ExecuteReader(); 
+                rdr.Read(); 
+
+                if (rdr.HasRows)
+                {
+                    F.Id = Convert.ToInt32(rdr["cod_funcionario"]);
+                    F.Nome = rdr["nome"].ToString().ToUpper();
+                    F.Email = rdr["email"].ToString();
+                    F.Cargo = rdr["cargo"].ToString().ToLower();
+                    F.Cpf = rdr["cpf"].ToString();
+                    F.Senha = rdr["senha"].ToString();
+
+                    if (rdr["cod_funcionario"].ToString().Equals(F.Id))
+                    {
+                        rdr.Close();
+                        Console.WriteLine("Dados conferem, ação executada com sucesso.");
+                    }
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Erro! Funcionário não existe.");
+                    rdr.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro! não foi possível verificar o funcionário. \n" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                mConn.Close();
+            }
+
+        }
+
+        public bool deletarFuncionario(Funcionario F)
+        {
+            try
+            {
+                if (mConn.State != ConnectionState.Open)
+                {
+                    mConn.Open();
+                }
+
+                this.sql = "SELECT nome FROM Funcionario WHERE cod_funcionario = @id";
+                MySqlCommand cmd = new MySqlCommand(this.sql, mConn);
+                cmd.Parameters.AddWithValue("@id", F.Id);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                rdr.Read();
+
+                if (rdr.HasRows)
+                {
+                    F.Nome = rdr["nome"].ToString();
+
+                    this.sql = "DELETE FROM Funcionario WHERE cod_funcionario = @id";
+                    cmd = new MySqlCommand(this.sql, mConn);
+
+
+                    int linhas = cmd.ExecuteNonQuery();
+                    return linhas > 0;
+                }
+                else
+                {
+                    Console.WriteLine("Erro! Funcionário não existe.");
+                    rdr.Close();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro! não foi possível deletar o funcionário. \n" + ex.Message);
+                return false;
+            }
+            finally
+            {
+                mConn.Close();
+            }
+        }
+
+        public int verificarPratos()
         {
             try
             {
@@ -318,13 +429,13 @@ namespace DAO
                 this.sql = $"SELECT count(*) FROM Prato";
                 MySqlCommand cmd = new MySqlCommand(this.sql, this.mConn);
 
-                int linhas = cmd.ExecuteNonQuery();
-                return linhas > 0;
+                var result = cmd.ExecuteScalar();
+                return Convert.ToInt32(result);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Erro! não foi possível verificar o prato. \n\n" + ex.Message);
-                return false;
+                return 0;
             }
             finally
             {

@@ -44,6 +44,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Users">
+      <HintPath>..\Users\bin\Debug\Users.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CadastroFuncionario.cs">
@@ -78,6 +81,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaindoMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaindoMsg.Designer.cs">
+      <DependentUpon>SaindoMsg.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CadastroFuncionario.resx">
       <DependentUpon>CadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +111,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SaindoMsg.resx">
+      <DependentUpon>SaindoMsg.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,10 +131,6 @@
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{d6ad194a-cc53-46c8-b476-81263941df72}</Project>
       <Name>DAO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PessoaFuncionario\PessoaFuncionario.csproj">
-      <Project>{51fa8156-3448-40c1-866a-ee24c20dfb35}</Project>
-      <Name>PessoaFuncionario</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

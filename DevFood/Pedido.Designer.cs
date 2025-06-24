@@ -31,11 +31,14 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFuncionario = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPratos = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodFunc = new System.Windows.Forms.TextBox();
+            this.lblCodFunc = new System.Windows.Forms.Label();
+            this.btnFazerPedido = new System.Windows.Forms.Button();
             this.lblTaxa2 = new System.Windows.Forms.Label();
             this.txtTaxa2 = new System.Windows.Forms.TextBox();
             this.cmbItem5 = new System.Windows.Forms.ComboBox();
@@ -69,9 +72,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumeroPedido = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnFazerPedido = new System.Windows.Forms.Button();
-            this.txtCodFunc = new System.Windows.Forms.TextBox();
-            this.lblCodFunc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -91,9 +91,9 @@
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.MediumPurple;
             this.splitContainer1.Panel1.Controls.Add(this.btnFechar);
             this.splitContainer1.Panel1.Controls.Add(this.btnSair);
-            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.btnFuncionario);
             this.splitContainer1.Panel1.Controls.Add(this.button3);
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
+            this.splitContainer1.Panel1.Controls.Add(this.btnPratos);
             this.splitContainer1.Panel1.Controls.Add(this.button5);
             // 
             // splitContainer1.Panel2
@@ -109,11 +109,12 @@
             // btnFechar
             // 
             this.btnFechar.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFechar.Location = new System.Drawing.Point(17, 219);
+            this.btnFechar.Location = new System.Drawing.Point(-13, 396);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(86, 23);
+            this.btnFechar.Size = new System.Drawing.Size(146, 40);
             this.btnFechar.TabIndex = 14;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
@@ -122,64 +123,69 @@
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSair.Location = new System.Drawing.Point(17, 184);
+            this.btnSair.Location = new System.Drawing.Point(-13, 357);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(86, 23);
+            this.btnSair.Size = new System.Drawing.Size(146, 40);
             this.btnSair.TabIndex = 13;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // button4
+            // btnFuncionario
             // 
-            this.button4.BackColor = System.Drawing.Color.MediumPurple;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(17, 148);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Cadastro";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnFuncionario.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFuncionario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnFuncionario.Location = new System.Drawing.Point(-13, 151);
+            this.btnFuncionario.Name = "btnFuncionario";
+            this.btnFuncionario.Size = new System.Drawing.Size(146, 40);
+            this.btnFuncionario.TabIndex = 11;
+            this.btnFuncionario.Text = "Funcionario";
+            this.btnFuncionario.UseVisualStyleBackColor = false;
+            this.btnFuncionario.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.GhostWhite;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.MediumPurple;
-            this.button3.Location = new System.Drawing.Point(17, 72);
+            this.button3.Location = new System.Drawing.Point(-13, 73);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 23);
+            this.button3.Size = new System.Drawing.Size(146, 40);
             this.button3.TabIndex = 10;
             this.button3.Text = "Pedido";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnPratos
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumPurple;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(17, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Pratos";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPratos.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnPratos.FlatAppearance.BorderSize = 0;
+            this.btnPratos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPratos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnPratos.Location = new System.Drawing.Point(-13, 112);
+            this.btnPratos.Name = "btnPratos";
+            this.btnPratos.Size = new System.Drawing.Size(146, 40);
+            this.btnPratos.TabIndex = 9;
+            this.btnPratos.Text = "Pratos";
+            this.btnPratos.UseVisualStyleBackColor = false;
+            this.btnPratos.Click += new System.EventHandler(this.button2_Click);
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.MediumPurple;
+            this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(17, 33);
+            this.button5.Location = new System.Drawing.Point(-13, 35);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 23);
+            this.button5.Size = new System.Drawing.Size(146, 40);
             this.button5.TabIndex = 8;
             this.button5.Text = "Home";
             this.button5.UseVisualStyleBackColor = false;
@@ -227,6 +233,37 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(609, 359);
             this.panel1.TabIndex = 3;
+            // 
+            // txtCodFunc
+            // 
+            this.txtCodFunc.Location = new System.Drawing.Point(134, 96);
+            this.txtCodFunc.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCodFunc.Name = "txtCodFunc";
+            this.txtCodFunc.Size = new System.Drawing.Size(68, 20);
+            this.txtCodFunc.TabIndex = 37;
+            // 
+            // lblCodFunc
+            // 
+            this.lblCodFunc.AutoSize = true;
+            this.lblCodFunc.Location = new System.Drawing.Point(27, 98);
+            this.lblCodFunc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCodFunc.Name = "lblCodFunc";
+            this.lblCodFunc.Size = new System.Drawing.Size(90, 13);
+            this.lblCodFunc.TabIndex = 36;
+            this.lblCodFunc.Text = "Cod. Funcionario:";
+            // 
+            // btnFazerPedido
+            // 
+            this.btnFazerPedido.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnFazerPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFazerPedido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnFazerPedido.Location = new System.Drawing.Point(30, 312);
+            this.btnFazerPedido.Name = "btnFazerPedido";
+            this.btnFazerPedido.Size = new System.Drawing.Size(103, 23);
+            this.btnFazerPedido.TabIndex = 35;
+            this.btnFazerPedido.Text = "Cadastrar Pedido";
+            this.btnFazerPedido.UseVisualStyleBackColor = false;
+            this.btnFazerPedido.Click += new System.EventHandler(this.btnFazerPedido_Click);
             // 
             // lblTaxa2
             // 
@@ -559,44 +596,15 @@
             this.lblTitle.TabIndex = 2;
             this.lblTitle.Text = "Pedido";
             // 
-            // btnFazerPedido
-            // 
-            this.btnFazerPedido.BackColor = System.Drawing.Color.MediumPurple;
-            this.btnFazerPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFazerPedido.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFazerPedido.Location = new System.Drawing.Point(30, 312);
-            this.btnFazerPedido.Name = "btnFazerPedido";
-            this.btnFazerPedido.Size = new System.Drawing.Size(103, 23);
-            this.btnFazerPedido.TabIndex = 35;
-            this.btnFazerPedido.Text = "Cadastrar Pedido";
-            this.btnFazerPedido.UseVisualStyleBackColor = false;
-            this.btnFazerPedido.Click += new System.EventHandler(this.btnFazerPedido_Click);
-            // 
-            // txtCodFunc
-            // 
-            this.txtCodFunc.Location = new System.Drawing.Point(134, 96);
-            this.txtCodFunc.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCodFunc.Name = "txtCodFunc";
-            this.txtCodFunc.Size = new System.Drawing.Size(68, 20);
-            this.txtCodFunc.TabIndex = 37;
-            // 
-            // lblCodFunc
-            // 
-            this.lblCodFunc.AutoSize = true;
-            this.lblCodFunc.Location = new System.Drawing.Point(27, 98);
-            this.lblCodFunc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCodFunc.Name = "lblCodFunc";
-            this.lblCodFunc.Size = new System.Drawing.Size(90, 13);
-            this.lblCodFunc.TabIndex = 36;
-            this.lblCodFunc.Text = "Cod. Funcionario:";
-            // 
             // frmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
@@ -647,9 +655,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNumeroPedido;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnFuncionario;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPratos;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblTaxa2;
         private System.Windows.Forms.TextBox txtTaxa2;

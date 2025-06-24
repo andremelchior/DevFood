@@ -7,8 +7,8 @@
     <ProjectGuid>{51FA8156-3448-40C1-866A-EE24C20DFB35}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PessoaFuncionario</RootNamespace>
-    <AssemblyName>PessoaFuncionario</AssemblyName>
+    <RootNamespace>Users</RootNamespace>
+    <AssemblyName>Users</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
