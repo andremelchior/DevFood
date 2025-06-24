@@ -75,10 +75,10 @@ namespace DevFood
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Você tem certeza que deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Você tem certeza que deseja fechar o programa?", "Fechar sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                SaindoMsg saindo = new SaindoMsg();
+                SaindoMsg fechando = new SaindoMsg();
 
 
                 Timer timer = new Timer();
@@ -90,11 +90,12 @@ namespace DevFood
                     Application.Exit();
                 };
                 timer.Start();
-                saindo.Show();
+                fechando.lblMsg.Text = "Fechando...";
+                fechando.Show();
             }
             else
             {
-                MessageBox.Show("Você cancelou a ação de sair.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Você cancelou a ação de fechar o programa.", "Ação Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void label5_Click(object sender, EventArgs e)

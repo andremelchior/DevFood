@@ -16,5 +16,10 @@ namespace DevFood
         {
             InitializeComponent();
         }
+
+        private void lblMsg_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

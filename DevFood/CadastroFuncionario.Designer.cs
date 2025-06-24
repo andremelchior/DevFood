@@ -90,11 +90,12 @@
             // btnFechar
             // 
             this.btnFechar.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFechar.Location = new System.Drawing.Point(17, 402);
+            this.btnFechar.Location = new System.Drawing.Point(-13, 396);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(86, 23);
+            this.btnFechar.Size = new System.Drawing.Size(146, 40);
             this.btnFechar.TabIndex = 12;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
@@ -103,11 +104,12 @@
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.MediumPurple;
+            this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSair.Location = new System.Drawing.Point(17, 367);
+            this.btnSair.Location = new System.Drawing.Point(-13, 357);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(86, 23);
+            this.btnSair.Size = new System.Drawing.Size(146, 40);
             this.btnSair.TabIndex = 11;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -117,25 +119,27 @@
             // 
             this.button4.BackColor = System.Drawing.Color.GhostWhite;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.MediumPurple;
-            this.button4.Location = new System.Drawing.Point(17, 148);
+            this.button4.Location = new System.Drawing.Point(-13, 151);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 23);
+            this.button4.Size = new System.Drawing.Size(146, 40);
             this.button4.TabIndex = 7;
-            this.button4.Text = "Cadastro";
+            this.button4.Text = "Funcionario";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.MediumPurple;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(17, 72);
+            this.button3.Location = new System.Drawing.Point(-13, 74);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 23);
+            this.button3.Size = new System.Drawing.Size(146, 40);
             this.button3.TabIndex = 6;
             this.button3.Text = "Pedido";
             this.button3.UseVisualStyleBackColor = false;
@@ -144,11 +148,12 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.MediumPurple;
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(17, 110);
+            this.button2.Location = new System.Drawing.Point(-13, 113);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
+            this.button2.Size = new System.Drawing.Size(146, 40);
             this.button2.TabIndex = 5;
             this.button2.Text = "Pratos";
             this.button2.UseVisualStyleBackColor = false;
@@ -157,11 +162,12 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.MediumPurple;
+            this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(17, 33);
+            this.button5.Location = new System.Drawing.Point(-13, 35);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 23);
+            this.button5.Size = new System.Drawing.Size(146, 40);
             this.button5.TabIndex = 4;
             this.button5.Text = "Home";
             this.button5.UseVisualStyleBackColor = false;

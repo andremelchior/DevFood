@@ -95,7 +95,7 @@
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSair.Location = new System.Drawing.Point(-13, 357);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(146, 39);
+            this.btnSair.Size = new System.Drawing.Size(146, 40);
             this.btnSair.TabIndex = 9;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -179,6 +179,7 @@
             this.btnFuncionario.TabIndex = 11;
             this.btnFuncionario.Text = "Funcionario";
             this.btnFuncionario.UseVisualStyleBackColor = false;
+            this.btnFuncionario.Click += new System.EventHandler(this.btnFuncionario_Click);
             // 
             // Home
             // 
